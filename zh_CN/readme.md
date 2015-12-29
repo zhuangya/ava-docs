@@ -4,41 +4,41 @@
 
 [![Build Status: Linux](https://travis-ci.org/sindresorhus/ava.svg?branch=master)](https://travis-ci.org/sindresorhus/ava) [![Build status: Windows](https://ci.appveyor.com/api/projects/status/igogxrcmhhm085co/branch/master?svg=true)](https://ci.appveyor.com/project/sindresorhus/ava/branch/master) [![Coverage Status](https://coveralls.io/repos/sindresorhus/ava/badge.svg?branch=master&service=github)](https://coveralls.io/github/sindresorhus/ava?branch=master) [![Gitter](https://img.shields.io/badge/Gitter-Join_the_AVA_chat_%E2%86%92-00d06f.svg)](https://gitter.im/sindresorhus/ava)
 
-Even though JavaScript is single-threaded, IO in Node.js can happen in parallel due to its async nature. AVA takes advantage of this and runs your tests concurrently, which is especially beneficial for IO heavy tests. In addition, test files are run in parallel as separate processes, giving you even better performance and an isolated environment for each test file. [Switching](https://github.com/sindresorhus/pageres/commit/663be15acb3dd2eb0f71b1956ef28c2cd3fdeed0) from Mocha to AVA in Pageres brought the test time down from 31 sec to 11 sec. Having tests run concurrently forces you to write atomic tests, meaning tests don't depend on global state or the state of other tests, which is a great thing!
+虽然 JavaScript 是单线程的，但是 Node.js 中由于天然的异步特性，所以 IO 可以并发执行。AVA 利用这一优势来并发运行你的测试，这对于高 IO 的测试来说是非常有优势的。另外，测试文件是分配到不同的进程上运行，给你更好的性能以及针对每个文件都运行环境隔离开。
+ [更换](https://github.com/sindresorhus/pageres/commit/663be15acb3dd2eb0f71b1956ef28c2cd3fdeed0) Mocha 成 AVA 之后， Pageres 的测试时间从 31 秒降低到了 11 秒。平行跑测试使得你不得不写原子性测试，也就是说不能依赖于全局状态或者其他测试的状态，这是对开发非常有意的事情！
 
-*Read our [contributing guide](contributing.md) if you're looking to contribute (issues/PRs/etc).*
+*阅读我们的 [贡献指南](contributing.md) 如果你想做贡献 (issues/PRs/等等)。*  
 
-Translations: [Français](https://github.com/sindresorhus/ava-docs/blob/master/fr_FR/readme.md)
+翻译版本：[法语](https://github.com/sindresorhus/ava-docs/blob/master/fr_FR/readme.md)
 
+## 目录
 
-## Table of Contents
-
-- [Usage](#usage)
-- [CLI Usage](#cli)
-- [Documentation](#documentation)
+- [用法](#usage)
+- [命令行用法](#cli)
+- [文档](#documentation)
 - [API](#api)
-- [Assertions](#assertions)
+- [断言](#assertions)
 - [FAQ](#faq)
 
 
-## Why AVA?
+## 为什么使用 AVA?
 
-- Minimal and fast
-- Simple test syntax
-- Runs tests concurrently
-- Enforces writing atomic tests
-- No implicit globals
-- [Isolated environment for each test file](#isolated-environment)
-- [Write your tests in ES2015](#es2015-support)
-- [Promise support](#promise-support)
-- [Generator function support](#generator-function-support)
-- [Async function support](#async-function-support)
-- [Observable support](#observable-support)
-- [Enhanced asserts](#enhanced-asserts)
-- [Optional TAP output](#optional-tap-output)
+- 极简快速
+- 简单的测试语法
+- 并发运行测试
+- 强制写原子性测试
+- 没有隐式全局变量
+- [每个测试文件环境隔离](#isolated-environment)
+- [使用 ES2015 来写你的测试](#es2015-support)
+- [Promise 支持](#promise-support)
+- [Generator 函数支持](#generator-function-support)
+- [Async 函数支持](#async-function-support)
+- [观察者模式支持](#observable-support)
+- [更好的断言](#enhanced-asserts)
+- [可选的 TAP 输出模式](#optional-tap-output)
 
 
-## Test syntax
+## 测试语法
 
 ```js
 import test from 'ava';
@@ -49,11 +49,12 @@ test(t => {
 ```
 
 
-## Usage
+## 用法
 
-#### Initialize
+#### 初始化
 
-Install AVA globally `$ npm install --global ava` and run `$ ava --init` (with any options) to add AVA to your package.json or create one.
+
+全局安装 AVA `$ npm install --global ava` 然后执行 `$ ava --init` (和任何选项)来增加 AVA 到你的 package.json 或者帮助你创建一个。
 
 ```json
 {
@@ -67,7 +68,7 @@ Install AVA globally `$ npm install --global ava` and run `$ ava --init` (with a
 }
 ```
 
-#### Create your test file
+#### 创建你的测试文件
 
 ```js
 import test from 'ava';
@@ -88,14 +89,14 @@ test('bar', async t => {
 
 <img src="screenshot.png" width="150" align="right">
 
-#### Run it
+#### 运行
 
 ```
 $ npm test
 ```
 
 
-## CLI
+## 命令行 （CLI）
 
 ```
 $ ava --help
