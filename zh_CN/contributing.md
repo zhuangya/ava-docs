@@ -26,22 +26,24 @@
 
 ### 提交 issues
 
-- The issue tracker is for issues. Use our [chat](https://gitter.im/sindresorhus/ava) or [Stack Overflow](https://stackoverflow.com/questions/tagged/ava) for support.
-- Search the issue tracker before opening an issue.
-- Ensure you're using the latest version of AVA.
-- Use a clear and descriptive title.
-- Include as much information as possible: Steps to reproduce the issue, error message, Node.js version, operating system, etc.
-- The more time you put into an issue, the more we will.
-- [The best issue report is a failing test proving it.](https://twitter.com/sindresorhus/status/579306280495357953)
+- Issue tracker 是用来追踪问题的。使用我们的[在线聊天](https://gitter.im/sindresorhus/ava)或者 [Stack Overflow](https://stackoverflow.com/questions/tagged/ava) 来寻求支持。
+- 发起 issue 之前先搜索已有的 issue 。
+- 确保你是使用最新版本的 AVA 。
+- 标题要清晰明了。
+- 尽可能详细的描述需要的信息，比如：复现问题的步骤，错误信息， Node.js 版本，操作系统等等。
+- 你花在一个 issue 上的时间更多，我们也会更多。
+- [提供一个失败的测试案例是最好的报告问题的方式](https://twitter.com/sindresorhus/status/579306280495357953)
 
-### Submitting a pull request
 
-- Non-trivial changes are often best discussed in an issue first, to prevent you from doing unnecessary work.
-- For ambitious tasks, you should try to get your work in front of the community for feedback as soon as possible. Open a pull request as soon as you have done the minimum needed to demonstrate your idea. At this early stage, don't worry about making things perfect, or 100% complete. Add a [WIP] prefix to the title, and describe what you still need to do. This lets reviewers know not to nit-pick small details or point out improvements you already know you need to make. 
-- New features should be accompanied with tests and documentation.
-- Don't include unrelated changes.
-- Lint and test before submitting the pull request by running `$ npm test`.
-- Make the pull request from a [topic branch](https://github.com/dchelimsky/rspec/wiki/Topic-Branches), not master.
-- Use a clear and descriptive title for the pull request and commits.
-- Write a convincing description of why we should land your pull request. It's your job to convince us. Answer "why" it's needed and provide use-cases.
-- You might be asked to do changes to your pull request. There's never a need to open another pull request. [Just update the existing one.](https://github.com/RichardLitt/docs/blob/master/amending-a-commit-guide.md)
+### 提交 Pull Request
+
+
+- 重大的改动最好先在 issue 中讨论号，避免做许多不必要的工作。
+- 对于一些宏伟的任务，你应该尽快放出来好让社区尽快作出反馈。做出可以表达你的想法的最小需求之后就马上来开一个 pull request。在这样早期的时候，不必担心没有把事情做完美，或者 100% 完成。在标题中协商 [WIP] 的前缀，并且描述一下还需要做哪些事情。这样可以让审阅代码的人明白不必要对一些小细节吹毛求疵或者指出一些你已经知道的需要改进的地方。
+- 新功能应该同测试和文档一起发布。
+- 不要引入不必要的改动。
+- 发起 pull request 之前使用 `$ npm test` 来做语法检查和测试。
+- 从一个[话题分支](https://github.com/dchelimsky/rspec/wiki/Topic-Branches)发起 pull request ， 不要从 master 上发起。
+- 对于 pull request 和提交信息，使用清晰明了的标题。
+- 写下为什么我们要合并你的 pull request 的理由。说服我们是你的工作。回答清楚“为什么”这个改动是必须的并且提供用户案例。
+- 也许你需要更新或者改进你的 pull request 。没有必要另外新开一个。[直接更新已有的就好了。](https://github.com/RichardLitt/docs/blob/master/amending-a-commit-guide.md)
