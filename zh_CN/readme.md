@@ -101,18 +101,18 @@ $ npm test
 ```
 $ ava --help
 
-  Usage
-    ava [<file|folder|glob> ...]
+	用法
+    ava [<文件|目录|通配符> ...]
 
-  Options
-    --init       Add AVA to your project
-    --fail-fast  Stop after first test failure
-    --serial     Run tests serially
-    --require    Module to preload (Can be repeated)
-    --tap        Generate TAP output
-    --verbose    Enable verbose output
+  选项
+    --init       增加 AVA 到你的项目中
+    --fail-fast  一遇到测试失败就停止
+    --serial     串行运行测试
+    --require    需要预加载的模块（可以多次使用）
+    --tap        生成 TAP 输出
+    --verbose    开启详细输出
 
-  Examples
+  例子
     ava
     ava test.js test2.js
     ava test-*.js
@@ -120,12 +120,13 @@ $ ava --help
     ava --init
     ava --init foo.js
 
-  Default patterns when no arguments:
+	当没有参数的时候没人的文件模式：
   test.js test-*.js test/**/*.js
 ```
 
-Directories are recursive by default. Files in directories named `fixtures` and `helpers` are ignored, as well as files starting with `_`. This can be useful for having helpers in the same directory as your test files.
+默认目录是递归遍历的。文件名中含有 `fixtures` 和 `helpers` 的文件会被忽略，文件名以 `_` 的文件也会被忽略。在一些辅助文件和测试文件在同一个目录中的时候会非常又用。
 
+*警告：非标准行为：* AVA 的命令行工具总是会尝试查找和使用项目本地安装的 AVA 。即使是使用全局的 `ava` 命令也是这样。
 *WARNING: NON-STANDARD BEHAVIOR:* The AVA CLI will always try to find and use your projects local install of AVA. This is true even when you run the global `ava` command. This non-standard behavior solves an important [issue](https://github.com/sindresorhus/ava/issues/157), and should have no impact on everyday use.
 
 ## Documentation
